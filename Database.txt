@@ -1,0 +1,62 @@
+Create database LibraryManagementSystem;
+use LibraryManagementSystem;
+CREATE TABLE Login(
+Username varchar(50),
+Password text (45)
+);
+SHOW TABLES;
+
+CREATE TABLE Account(
+Username varchar(20),
+Name varchar(25),
+Password varchar(25),
+Security_Ques varchar(25),
+Security_Ans varchar(25)
+);
+SHOW TABLES;
+
+
+CREATE Table Student(
+StudentId varchar(20), 
+Full_Name varchar(55),
+ Course varchar(40), 
+ Branch varchar(40),
+ Year varchar(10), 
+ Semester varchar(40)
+ );
+ SHOW TABLES;
+ 
+ CREATE TABLE Book(
+ Book_id varchar(10),
+ Name varchar(50), 
+ /*isbn varchar(20),*/
+ Author varchar (50),
+ Publisher varchar(50),
+ Edition varchar(40), 
+ Price varchar(50) 
+ );
+ SHOW TABLES;
+
+ CREATE TABLE IssueBook(
+ Book_id varchar(10), 
+ StudentId varchar(10), 
+ bname varchar(40), 
+ sname varchar(40), 
+ Course varchar(40),
+ Branch varchar(40),
+ DateOfIssue DATE
+ );
+SHOW TABLES;
+
+use LibraryManagementSystem;
+CREATE TABLE ReturnBook(
+Book_id varchar(10), 
+StudentId varchar(10),
+ bname varchar(40), 
+ sname varchar(40),
+ Course varchar(20), 
+ Branch varchar(10), 
+ DateOfIssue varchar(30),
+ DateOfReturn varchar(30)
+ );
+SHOW TABLES;
